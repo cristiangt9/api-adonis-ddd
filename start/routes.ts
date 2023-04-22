@@ -19,6 +19,9 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import dbInit from 'App/Layers/Infrastructure/Repository/Mongo'
+
+dbInit().then()
 
 Route.get('/', async () => {
   return { hello: 'world' }

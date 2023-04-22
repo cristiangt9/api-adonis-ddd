@@ -13,7 +13,7 @@ export class TaskUseCases {
     return this.taskRepository.getById(id)
   }
 
-  public async createTask(task: TaskEntity): Promise<TaskEntity> {
+  public async createTask(task: TaskEntity): Promise<TaskEntity | null> {
     return this.taskRepository.create(task)
   }
 
